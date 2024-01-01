@@ -1,0 +1,93 @@
+
+
+.error {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.error.active {
+    display: block;
+    border-radius: 3px;
+    border-color: red;
+}
+
+.userprofile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.userprofile>div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 48%;
+    /* Set the width to approximately half of the container width */
+}
+
+.userprofile label {
+    margin-bottom: 5px;
+}
+
+.userprofile input[type="password"] {
+    width: 100%;
+
+}
+
+#eye-icon {
+    height: 20px;
+    width: auto;
+    background: transparent;
+}
+
+.password-input-container {
+    width: 100%;
+    position: relative;
+
+}
+
+#password {
+    
+     border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#show-password-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateZ(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#eye-icon {
+    width: 20px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.labels {
+    margin-top: 10px;
+    font-weight: bold;
+}
+@media only screen and (min-width: 1200px)and (max-width: 3000px) {
+    #show-password-btn {
+        right: 60px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1160px) {
+    #show-password-btn {
+        right: 30px;
+    }
+}
+
+
