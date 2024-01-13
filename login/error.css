@@ -1,0 +1,15 @@
+.login_form #email-error,
+.login_form #pass-error
+{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 18px;
+  color: #C62828;
+  background-color: rgba(255, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #EF9A9A;
+  display: none;
+  }
