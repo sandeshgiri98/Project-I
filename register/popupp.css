@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Slab:wght@800&display=swap');
+body
+        {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #success-popup{
+            background: #fff;
+            border-radius: 5px;
+            max-width: 300px;
+            text-align: center;
+            margin: 70px auto;
+            padding: 40px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            #error-popup{
+                background: rgb(243, 239, 239);
+                border-radius: 5px;
+                max-width: 300px;
+                text-align: center;
+                margin: 70px auto;
+                padding: 40px;
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+                }
+               
+            .invalid
+            {
+                height: 200;
+                width: 150px;
+            }
+            #error-popup{
+                background: rgb(243, 239, 239);
+            }
+            #regerror-popup{
+                background: rgb(243, 239, 239);
+            }
+            h2{
+                /* font-family: 'Cabin', sans-serif; */
+                font-family: 'Roboto Slab', serif;
+            }
+            p{
+                font-family: 'Cabin', sans-serif;
+            }
+            .incorrect{
+                color: rgb(206, 6, 6);
+            }
