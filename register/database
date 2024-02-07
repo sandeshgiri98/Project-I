@@ -1,0 +1,28 @@
+Create Database complaint_project;
+
+CREATE TABLE register (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(50) NOT NULL,
+    phone VARCHAR(10),
+    dob VARCHAR(20),
+    password VARCHAR(50),
+    role VARCHAR(10),
+    registration_datetime datetime DEFAULT CURRENT_TIMESTAMP,
+    fake_user VARCHAR(8) UNIQUE
+);
+ALTER TABLE register ADD COLUMN last_login_time DATETIME;
+
+DELIMITER //
+
+CREATE TRIGGER GenerateUserID BEFORE INSERT ON register
+FOR EACH ROW
+BEGIN
+    DECLARE prefix VARCHAR(3);
+    SET prefix = SUBSTRING_INDEX(SUBSTRING_INDEX(NEW.name, ' ', 2), ' ', -1);
+    SET NEW.fake_user = CONCAT(prefix, LPAD(FLOOR(RAND() * 100000), 5, '0'));
+END //
+
+DELIMITER ;
+
+ALTER TABLE register ADD COLUMN profile_image;
